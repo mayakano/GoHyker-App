@@ -9,3 +9,4 @@ This is a boilerplate Rails project that uses:
 
 # GoHykr - Ride Sharing App
 
+Allows you to login, signup, edit profile, post a ride, chat with other users, search for events and search for itineraries.
