@@ -1,0 +1,228 @@
+/* Thanks to @kathykato for the idea */
+
+
+//   body {
+//     font-family: sans-serif;
+//     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.0)),
+//       url('https://gorbich.com/common/275637.jpeg') no-repeat    center center fixed;
+//     background-size: cover;
+//     overflow: hidden;
+//   }
+
+
+  a {
+    color: #f1f2f3;
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+
+  h1 i {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 3em;
+    font-weight: 600;
+    color: #f1f2f3;
+    margin-bottom:20px;
+  }
+
+  .hero-title {
+    font-size: 55px;
+    font-weight: light;
+    color: #1a1919;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    line-height: 1em;
+    text-align: center;
+  }
+
+  .hero {
+    height: 530px;
+    position: relative;
+    background:  linear-gradient(
+        rgba(238, 204, 204, 0.45),
+        rgba(77, 57, 57, 0.45)
+      ), image-url('travel.jpg');
+    margin-top: -50px;
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4)
+  }
+
+  .form-inline {
+    margin-left: auto!important;
+    margin-right: auto!important;
+    text-align: center;
+    display: block;
+    width: 220px;
+  }
+
+  a.btn {
+    color: #f1f2f3;
+    padding: 10px;
+    border: 1px solid #f1f2f3;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  a.btn:hover {
+    background: #325d81;
+    border: 1px solid #325d81;
+    color: #fff;
+  }
+
+  .content {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+    // box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .height-form {
+    height: 530px;
+    display: flex;
+  }
+
+  .search-box {
+    height: 235px;
+    padding: 20px;
+  }
+
+//   form > * {
+//     line-height: 50px;
+//     font-size: 1rem;
+//     border-radius: 0;
+//     outline: 0;
+//   }
+
+  input[type="search"] {
+    flex-basis: 500px;
+    padding: 8px 15px 10px;
+    overflow: hidden;
+  }
+
+//   input[type="submit"] {
+//     color: #ffffff;
+//     padding: 0 30px;
+//     cursor: pointer;
+//     transition: all 0.2s;
+//   }
+
+
+
+  .searchOption {
+    margin-top: 120px;
+    display: block;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eeeeee7d;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  button[type="submit"] {
+    background-color: #e8716d;
+    border-radius: 3px;
+    padding: 10px 35px;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 10px;
+  }
+
+  button[type="submit"]:hover {
+  background-color: #e14641;
+  }
+
+  button[type="text"] {
+    font-family: Montserrat, sans-serif;
+  }
+
+  .table {
+    background-color: #e9e7e7;
+  }
+
+  tbody {
+      background-color: white;
+  }
+
+  @media all and (max-width:1020px) {
+    body {
+      font-size: 0.9rem;
+    }
+
+      header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      padding: 10px !important;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    form > * {
+      font-size: 0.9rem;
+    }
+
+    input[type="search"] {
+      flex-basis: 100%;
+    }
+  }
+
+  @media all and (max-width:600px) {
+    header nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    header nav ul li{
+      margin: 0 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="search"] {
+      text-align: center;
+    }
+  }
+
+  @media all and (max-width:425px) {
+    header nav ul > li:last-child {
+      margin-top: 30px;
+    }
+  }

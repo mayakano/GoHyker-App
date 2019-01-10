@@ -1,0 +1,84 @@
+<div id="containAbout">
+  <h1 class="section__headline">About Us</h1>
+
+  <p class="about-us">At GoHykr, we aim to provide you an unforgettable roadtrip experience that you will enjoy with the right group. We create this platform because we believe in the power of adventure and the importance of discovering new places with exciting people. </p>
+
+  <%
+=begin%>
+ <section class="groupImages">
+    <div class="firstUser">
+      <div class="stitched">
+        <%= image_tag "albert.jpg", class: "images"%>
+      </div>
+      <h1 class="nameTitle">Albert Fundora</h1>
+    </div>
+    <div class="secondUser">
+      <div class="stitched">
+        <%= image_tag "jerry.jpg", class: "images"%>
+      </div>
+      <h1 class="nameTitle">Jerry Trujillo</h1>
+    </div>
+  </section>
+  <section class="groupImages">
+    <div class="thirdUser">
+      <div class="stitched">
+        <%= image_tag "ryan.jpg", class: "images"%>
+      </div>
+      <h1 class="nameTitle">Ryan Naamani</h1>
+    </div>
+    <div class="fourthUser">
+      <div class="stitched">
+        <%= image_tag "maya.jpg", class: "images"%>
+      </div>
+      <h1 class="nameTitle">Maya Kano</h1>
+    </div>
+  </section>
+</div> 
+<%
+=end%>
+
+
+
+
+<!-- this section wraps the team members as a container-->
+
+<section class="cf team-container">
+  <h1 class="team-h1">Our Team</h1>
+
+    <!-- member-->  
+    <div class="team-member">
+      <%= image_tag "albert.jpg", class: "team-photo"%>
+      <h3>Albert Fundora</h3>
+      <span>Full-Stack Developer</span>
+       <a href="https://github.com/nomadriding"> <%= image_tag "github.png", class:"github" %></a>
+    </div>
+
+
+    <!-- member-->
+    <div class="team-member">
+      <%= image_tag "jerry.jpg", class: "team-photo"%>
+      <h3>Jerry Trujillo</h3>
+      <span>Full-Stack Developer</span>
+       <a href="https://github.com/Jerrytru"> <%= image_tag "github.png", class:"github" %></a>
+    </div>
+
+
+
+    <!-- member-->
+    <div class="team-member">
+      <%= image_tag "ryan.jpg", class: "team-photo"%>
+      <h3>Ryan Naamani</h3>
+      <span>Full-Stack Developer</span>
+       <a href="https://github.com/ryannaamani"> <%= image_tag "github.png", class:"github" %></a>
+    </div> 
+
+
+    <!-- member-->
+    <div class="team-member">
+      <%= image_tag "maya.jpg", class: "team-photo"%>
+      <h3>Maya Kano</h3>
+      <span>Full-Stack Developer</span>
+       <a href="https://github.com/mayakano"> <%= image_tag "github.png", class:"github" %></a>
+    </div> 
+  
+ </section>

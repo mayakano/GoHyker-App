@@ -1,0 +1,83 @@
+
+<% unless @itinerary.avatar_image.attachment.nil? %>
+<div class="containShow">
+  <div class="showPicture">
+    <div class="col-md-8">
+      <div class="text-center imageHolder">
+          <%= image_tag @itinerary.avatar, height: 250 %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+
+<div class="showItinerary">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Start location:</strong>
+    <%= @itinerary.start_loc %>
+  </p>
+  <p>
+    <strong>Start date:</strong>
+    <%= @itinerary.start_date %>
+  </p>
+
+   <p>
+    <strong>End location:</strong>
+    <%= @itinerary.end_loc %>
+  </p>
+  <p>
+    <strong>End date:</strong>
+    <%= @itinerary.end_date %>
+  </p>
+
+  <p>
+    <strong>Available seat:</strong>
+    <%= @itinerary.available_seat %>
+  </p>
+
+  <p>
+    <strong>Projected eta:</strong>
+    <%= @itinerary.eta %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @itinerary.description %>
+  </p>
+
+  <p>
+    <strong>Owner:</strong>
+    <%= @itinerary.username %>
+  </p>
+
+  <ul>
+    <strong>Attendees:</strong>
+    <% @itinerary.attendees.each do |attendee| %>
+      <li><%= attendee.user.username %></li>
+    <% end %>
+  </ul>
+
+  <button class="ui primary button"><%= link_to "Messages", chatrooms_path %></button>
+  <div>
+    <% if @itinerary.is_owner?(current_user)  %>
+      <div class="btn btn-primary">
+          <td><%= link_to 'Destroy', @itinerary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
+    <% end %>
+    <% unless @itinerary.joinable?(current_user) %>
+      <div class="btn btn-primary">
+          <td><%= link_to 'Join', itinerary_attendees_path(@itinerary), method: :post %></td>
+      </div>
+    <% end %>
+    <% if @itinerary.is_owner?(current_user) %>
+      <div class="btn btn-primary">
+        <%= link_to 'Edit', edit_itinerary_path(@itinerary) %>
+    <% end %>
+      </div>
+    <div class="btn btn-primary">
+      <%= link_to 'Back', itineraries_path %>
+    </div>
+  </div>
+</div>
+

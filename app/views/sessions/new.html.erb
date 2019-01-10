@@ -1,0 +1,59 @@
+<% stylesheet_link_tag 'application' %>
+
+<%= render 'chatrooms/messages' %>
+<section class="user">
+  <div class="user_options-container">
+    <div class="user_options-text">
+      <div class="user_options-unregistered">
+        <h2 class="user_unregistered-title">Don't have an account?</h2>
+        <p class="user_unregistered-text">Create your profile today and start organizing your trips!</p>
+        <a href="/signup"><button class="user_unregistered-signup" id="signup-button" formaction="/signup">Sign up</button></a>
+      </div>
+    </div>
+    <div class="user_options-forms" id="user_options-forms">
+      <%= form_tag sessions_path do %>
+      <div class="user_forms-login">
+        <h2 class="forms_title">Login</h2>
+        <form class="forms_form">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <%= label_tag :email %><br />
+              <%= text_field_tag :email, params[:email], class:'forms_field-input', placeholder:'Email'  %>
+            </div>
+            <div class="forms_field">
+              <%= label_tag :password %><br />
+              <%= password_field_tag :password, params[:password], class:'forms_field-input', placeholder:'Password' %>
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <button type="button" class="forms_buttons-forgot">Forgot password?</button>
+            <div class=" actions" style="color:white;"><%= submit_tag "Log In",  class: 'forms_buttons-action'%></div>
+          </div>
+        </form>
+      </div>
+      <% end %>
+      <div class="user_forms-signup">
+        <h2 class="forms_title">Sign Up</h2>
+        <form class="forms_form">
+          <fieldset class="forms_fieldset">
+            <div class="forms_field">
+              <input type="text" placeholder="Full Name" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="email" placeholder="Email" class="forms_field-input" required />
+            </div>
+            <div class="forms_field">
+              <input type="password" placeholder="Password" class="forms_field-input" required />
+            </div>
+          </fieldset>
+          <div class="forms_buttons">
+            <input type="submit" value="Sign up" class="forms_buttons-action">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  $('.forms_buttons-action').removeAttr('data-disable-with');
+</script>

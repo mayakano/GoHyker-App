@@ -1,0 +1,81 @@
+
+body {
+	margin:0;
+	padding:0;
+	padding:5%;
+	font-family: Montserrat, sans-serif;
+}
+
+.err_page {
+	width:100%;
+  height:80%;
+	margin:14% auto;
+	background:#fff;
+	text-align:center;
+}
+
+.err_page h1 {
+	font-family: Montserrat, sans-serif;
+	font-size:70pt;
+	margin:0;
+	color:#ff4b54;
+}
+
+.err_page h4 {	
+	color:#ff4b54;
+	font-size:14pt;
+	font-family: Montserrat, sans-serif;
+}
+
+.err_page p {
+	font-size:14pt;
+	font-family: Montserrat, sans-serif;
+	color: #737373;
+}
+
+.err_btn {
+	background:#fff;
+	border:2px solid #ff4b54;
+	padding:20px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	cursor:pointer;
+	font-family: Montserrat, sans-serif;
+	font-size:13pt;
+	transition:background 0.5s;
+}
+
+.err_btn:hover {
+	background:#ff4b54;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2);
+	color:#fff!important;
+}
+
+.credit {
+  position:absolute;
+  bottom:0;
+  right:0;
+}
+
+p {
+	padding-bottom: 55px;
+}
+
+button {
+	font-family: Montserrat, sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+  .err_page {
+     flex-direction:column;  
+  }
+
+  .err_page h4 {
+    margin:0;
+  }
+}
+/*-----------NOT NEEDED---------*/
+@media screen and (max-width: 350px) {
+  .credit {
+    visibility:hidden;
+  }
+}

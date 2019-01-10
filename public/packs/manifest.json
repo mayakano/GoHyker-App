@@ -1,0 +1,10 @@
+{
+  "application.js": "/packs/application-70e8aa30027e98e3eb63.js",
+  "application.js.map": "/packs/application-70e8aa30027e98e3eb63.js.map",
+  "hello-world-bundle.js": "/packs/hello-world-bundle-7a4f5bec3199c77a2829.js",
+  "hello-world-bundle.js.map": "/packs/hello-world-bundle-7a4f5bec3199c77a2829.js.map",
+  "hello_react.js": "/packs/hello_react-1ec277196727cdb0838c.js",
+  "hello_react.js.map": "/packs/hello_react-1ec277196727cdb0838c.js.map",
+  "itinerary-bundle.js": "/packs/itinerary-bundle-582c204b4eb66928fffc.js",
+  "itinerary-bundle.js.map": "/packs/itinerary-bundle-582c204b4eb66928fffc.js.map"
+}

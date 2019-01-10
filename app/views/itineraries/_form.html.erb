@@ -1,0 +1,69 @@
+<section class="user">
+  <div class="ride-forms user_options-forms" id="user_options-forms">
+    <div class="user_forms-login">
+
+      <%= form_with(model: itinerary, local: true) do |form| %>
+        <fieldset class="ride-fieldset forms_fieldset">
+
+        <% if itinerary.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(itinerary.errors.count, "error") %> prohibited this itinerary from being saved:</h2>
+
+            <ul>
+            <% itinerary.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="forms_field">
+            <strong><%= label_tag :origin, "Origin" %></strong>
+            <%= text_field_tag :start_loc, nil,  class: "form-control" %>
+        </div>
+
+        <div class="forms_field">
+            <strong><%= form.label :start_date %></strong>
+            <%= form.date_field :start_date, class: "form-control" %>
+            <%= itinerary.start_date %>
+        </div>
+
+        <div class="forms_field">
+            <strong><%= label_tag :destination, "Destination" %></strong>
+            <%= text_field_tag :end_loc, nil, class: "form-control" %>
+        </div>
+
+        <div class="forms_field">
+            <strong><%= form.label :end_date %></strong>
+            <%= form.date_field :end_date, class: "form-control" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :profile_image %>
+          <%= form.file_field :profile_image %>
+        </div>
+
+        <div class="forms_field">
+            <strong><%= form.label :available_seats%></strong>
+            <%= form.number_field :available_seats, class: "form-control" %>
+        </div>
+
+        <div class="forms_field">
+            <strong><%= form.label :description %></strong>
+            <%= form.text_area :description, class: "form-control" %>
+        </div>
+
+        <% begin %>
+          <div class="forms_field">
+            <%= form.hidden_field :user_id, value: current_user.id, class: "form-control" %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= form.submit :submit,  class: 'forms_buttons-action' %>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</section>

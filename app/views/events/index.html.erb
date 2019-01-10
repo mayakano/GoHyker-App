@@ -1,0 +1,24 @@
+<h1 class="section__headline">Event Search</h1>
+
+
+<section class="user">
+  <div class="event-form sign-up-forms user_options-forms" id="user_options-forms">
+    <div class="user_forms-login" style="display:block;">
+      <%= form_tag "/search", method: "get", id:"search-form" do %>
+        <div class="forms_field" >
+          <%= label_tag(:search_term, "Search for") %>
+          <%= text_field_tag(:search_term, " ", class:'form-control') %>
+        </div>
+        <div class="forms_field" >
+          <%= label_tag(:location, "Location") %>
+          <%= text_field_tag(:location, " ", class:'form-control') %>
+        </div>
+        <div class="forms_field" >
+          <%= label_tag(:date, "Date") %>
+          <%= date_field_tag(:date, " ", class:'form-control') %>
+        </div>
+        <%= submit_tag("Search", class: 'event-button forms_buttons-action', id:"search") %>
+      <% end %>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+<table class="table table-striped">
+  <thead class="thead-dark">
+    <tr>
+     <th scope="col">Start date</th>
+      <th scope="col">End date</th>
+      <th scope="col">Available seat</th>
+      <th scope="col">Projected eta</th>
+      <th scope="col">Origin</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Description</th>
+      <th scope="col">Username</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @itineraries.each do |itinerary| %>
+      <tr scope="row">
+        <td><%= itinerary.start_date %></td>
+        <td><%= itinerary.end_date %></td>
+        <td><%= itinerary.available_seat %></td>
+        <td><%= itinerary.eta %></td>
+        <td><%= itinerary.start_loc %>
+        <td><%= itinerary.end_loc %>
+        <td><%= itinerary.short_description %></td>
+        <td><%= itinerary.username %></td>
+        <% unless current_user == nil %>
+          <td><%= link_to 'Show', itinerary %></td>
+        <% else %>
+          <td><%= link_to 'Log In', login_path %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<%= will_paginate @itineraries %>
