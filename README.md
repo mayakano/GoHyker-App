@@ -11,3 +11,5 @@ This is a boilerplate Rails project that uses:
 
 Allows you to login, signup, edit profile, post a ride, chat with other users, search for events and search for itineraries.
 Written in React on Rails
+
+http://gohykr.herokuapp.com/
